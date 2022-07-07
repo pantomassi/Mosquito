@@ -1,0 +1,30 @@
+-COMMANDS-
+1) Commands not requiring the drone to be in the air (but will also work there, apart from 'take off', which is a non-action):
+- 'battery'
+- 'emergency' - also works in the air, but remember that it will stop the motors immediately as well
+- 'altitude'
+- 'temp'
+- 'picture'
+- 'video' - a new frame with video stream will appear and no other actions can be performed until it's closed with 'Q' key
+- 'take off'
+- 'exit' - terminate the whole app. If your drone was flying, it will land first
+
+2) Commands requiring the drone to be airborne:
+- 'land'
+- 'go {forward/back/left/right/up/down} {distance_20-999cm}'
+- 'turn {left/right} {degrees_1-360}'
+- 'turn back' (will do an auto 180 degrees turn)
+- 'flip {forward/back/left/right}'
+- 'set speed {10-100cm/s}'
+
+
+-NUMBERS-
+Required for {go/turn/set_speed}.
+
+-0 is passed as 'oh'.
+-100 can be passed as 'hundred' or 'hundred'.
+-Other numbers > 100 are passed as '{1-9} hundred {1-99}'
+
+Examples:
+-'go forward two fifty' will send a command to the drone to move 250cm ahead
+-'turn right one oh five' - the drone will turn in place 105 degrees clockwise
